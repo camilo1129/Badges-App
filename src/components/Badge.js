@@ -18,8 +18,9 @@ class Badge extends React.Component {
                 <div className="Badge__section-info">
                     <h3>{this.props.nameAnime}</h3>
                     <div>
-                        <p>Power fight: {this.props.powerFight}/1300</p>
+                        <p>Power fight: {this.props.powerFight}/3000</p>
                         <p>Special Trait: {this.props.specialTrait}</p>
+                        <p>Name Anime: {this.props.nameAnime}</p>
                     </div>
                 </div>
 

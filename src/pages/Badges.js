@@ -1,50 +1,44 @@
 import React from 'react';
 import './styles/Badges.css';
 import animeLogo from '../images/logo__page.png'
-import Navbar from '../components/Navbar.js';
 import BadgesList from '../components/BadgesList.js';
+import PageLoading from '../components/PageLoading.js';
+import PageError from '../components/PageError.js';
+import api from '../api.js';
 
 
 class Badges extends React.Component {
+    
     state = {
-        data: [
-            {
-                id: '2de30c42-9deb-40fc-a41f-05e62b5939a7',
-                firstName: 'Bulma',
-                lastName: 'Corp',
-                powerFight: '300',
-                specialTrait: 'Human',
-                nameAnime: 'Dragon Ball',
-                avatarUrl:
-                  'https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon',
-            },
-            {
-                id: 'd00d3614-101a-44ca-b6c2-0be075aeed3d',
-                firstName: 'Mr.',
-                lastName: 'Satan',
-                powerFight: '800',
-                specialTrait: 'Human',
-                nameAnime: 'Dragon Ball',
-                avatarUrl:
-                  'https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon',
-            },
-            {
-                id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
-                firstName: 'Mr.',
-                lastName: 'Krillin',
-                powerFight: '1300',
-                specialTrait: 'Human',
-                nameAnime: 'Dragon Ball',
-                avatarUrl:
-                  'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
-            },
-        ],
+        loading: true,
+        error: null,
+        data: undefined
     };
-    render(){
-        return(
-            <div>
-                <Navbar/>
 
+    componentDidMount() {
+        this.fetchData();
+    }
+
+    fetchData = async () => {
+        this.setState({ loading: true, error: null });
+
+        try {
+            const data = await api.badges.list();
+            this.setState({ loading: false, data: data });
+        } catch (error) {
+            this.setState({ loading: false, error: error });
+        }
+    };
+
+    render(){
+        if (this.state.loading === true) {
+            return <PageLoading />;
+        } 
+        if (this.state.error) {
+            return <PageError error={this.state.error} />;
+        }
+        return(
+            <React.Fragment>
                 <div className="Badges">
                     <div className="Badges__hero">
                         <div className="Badges__container">
@@ -62,7 +56,7 @@ class Badges extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 }
