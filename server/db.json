@@ -10,15 +10,6 @@
       "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
     },
     {
-      "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
-      "firstName": "Bulma",
-      "lastName": "",
-      "powerFight": "400",
-      "specialTrait": "Human",
-      "nameAnime": "Dragon Ball",
-      "avatarUrl": "https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon"
-    },
-    {
       "id": "63c03386-33a2-4512-9ac1-354ad7bec5e9",
       "firstName": "Naruto",
       "lastName": "Uzumaki",
@@ -39,10 +30,10 @@
     {
       "id": "1921a734-cc05-4f71-a677-ffe38dda6958",
       "firstName": "Mr",
-      "lastName": "Vegeta",
-      "powerFight": "2700",
+      "lastName": "VegetaZ",
+      "powerFight": "2800",
       "specialTrait": "Saiyan",
-      "nameAnime": "Dragon Ball",
+      "nameAnime": "Dragon Ball Z",
       "avatarUrl": "https://www.gravatar.com/avatar/01d0de92ec9ca4fdfbb99edf6a1abfea?d=identicon"
     },
     {
@@ -53,6 +44,24 @@
       "specialTrait": "Pokemon raton",
       "nameAnime": "Pokemon",
       "avatarUrl": "https://www.gravatar.com/avatar/684697e194c66d338c5ee91d030121cc?d=identicon"
+    },
+    {
+      "id": "1623db36-14t9-4f24-n139-200f3s1x1af7",
+      "firstName": "Ash",
+      "lastName": "Ketchum",
+      "powerFight": "900",
+      "specialTrait": "Human",
+      "nameAnime": "Pokemon",
+      "avatarUrl": "https://www.gravatar.com/avatar/694692e193a66d338c5we91d030121cc?d=identicon"
+    },
+    {
+      "id": "2029db36-44g9-4g24-n139-100k3a3b7wf7",
+      "firstName": "Kakashi",
+      "lastName": "hatake",
+      "powerFight": "1600",
+      "specialTrait": "Human",
+      "nameAnime": "Naruto",
+      "avatarUrl": "https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon"
     }
   ]
 }
